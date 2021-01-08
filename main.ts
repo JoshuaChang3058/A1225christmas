@@ -275,11 +275,33 @@ function 第一段 () {
 }
 let light2 = 0
 music.setTempo(199)
+basic.pause(1000)
 basic.forever(function () {
     light2 = input.lightLevel()
-    if (light2 > 130) {
-        basic.showString("2020")
-        basic.showIcon(IconNames.Heart)
-        basic.showString("Merry Christmas")
+    if (light2 > 51) {
+        basic.showString("2021")
+        basic.showIcon(IconNames.Pitchfork)
+        basic.showLeds(`
+            # . # . #
+            # . # . #
+            # # # # #
+            . # # # .
+            . # # # .
+            `)
+        basic.showLeds(`
+            # . # . #
+            # . # . #
+            # # # # #
+            # # # # #
+            # # # # #
+            `)
+        basic.showArrow(ArrowNames.East)
+        basic.showArrow(ArrowNames.South)
+        basic.showArrow(ArrowNames.West)
+        basic.showArrow(ArrowNames.North)
+        basic.showArrow(ArrowNames.NorthEast)
+        basic.showArrow(ArrowNames.SouthEast)
+        basic.showArrow(ArrowNames.SouthWest)
+        basic.showArrow(ArrowNames.NorthWest)
     }
 })
